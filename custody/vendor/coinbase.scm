@@ -180,7 +180,7 @@
      addr endpoint
      (lambda ()
        (artanis:http-get url
-                         #:headers `((content-type . "application/json")
+                         #:headers `((content-type application/json)
                                      (authorization bearer ,jwt)))))))
 
 (define (coinbase/api-delete addr endpoint)
@@ -189,7 +189,7 @@
      addr endpoint
      (lambda ()
        (artanis:http-delete url
-                            #:headers `((content-type . "application/json")
+                            #:headers `((content-type application/json)
                                         (authorization bearer ,jwt)))))))
 
 (define (coinbase/api-patch addr endpoint data)
@@ -198,7 +198,7 @@
      addr endpoint
      (lambda ()
        (artanis:http-patch url
-                           #:headers `((content-type . "application/json")
+                           #:headers `((content-type application/json)
                                        (authorization bearer ,jwt))
                            #:body (scm->json-string data))))))
 
@@ -208,7 +208,7 @@
      addr endpoint
      (lambda ()
        (artanis:http-post url
-                          #:headers `((content-type . "application/json")
+                          #:headers `((content-type application/json)
                                       (authorization bearer ,jwt))
                           #:body data)))))
 
@@ -218,7 +218,7 @@
      addr endpoint
      (lambda ()
        (artanis:http-put url
-                         #:headers `((content-type . "application/json")
+                         #:headers `((content-type application/json)
                                      (authorization bearer ,jwt))
                          #:body data)))))
 
